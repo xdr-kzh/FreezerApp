@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+	compileSdkVersion 24
+	buildToolsVersion '24.0.1'
+	defaultConfig {
+		applicationId "java.akozhevnikov.freezertest"
+		minSdkVersion 15
+		targetSdkVersion 24
+		versionCode 1
+		versionName "1.0"
+	}
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+}
+
+dependencies {
+	compile fileTree(include: ['*.jar'], dir: 'libs')
+	compile 'com.android.support:appcompat-v7:24.0.0'
+	compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
+	compile 'com.android.support:design:24.0.0'
+	compile 'com.github.bumptech.glide:glide:3.7.0'
+	compile 'fr.xebia.android.freezer:freezer:2.0.3'
+	provided 'fr.xebia.android.freezer:freezer-annotations:2.0.3'
+	apt 'fr.xebia.android.freezer:freezer-compiler:2.0.3'
+}

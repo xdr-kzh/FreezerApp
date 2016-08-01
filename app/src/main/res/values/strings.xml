@@ -1,0 +1,4 @@
+<resources>
+	<string name="app_name">Freezer Example App</string>
+	<string name="title_activity_main">Content Feed</string>
+</resources>
